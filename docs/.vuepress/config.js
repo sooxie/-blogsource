@@ -1,6 +1,6 @@
 
 module.exports = {
-  title: 'Fun',
+  title: 'sooxie',
   description : 'blog',
   base: '/blog/',
   home: true,
@@ -15,6 +15,10 @@ module.exports = {
         link: '/computer/'
       },
       {
+        text: 'Algorithm',
+        link: '/algorithm/'
+      },
+      {
         text: '版本控制',
         link: '/version/'
       },
@@ -22,16 +26,18 @@ module.exports = {
         text: "了解更加多",
         link: "/learnmore/",
         items: [
-          { text: "初级篇", link: "/learnmore/part1/" },
-          { text: "进阶篇", link: "/learnmore/part12/" },
-          { text: "大神篇", link: "http://www.baidu.com" }
+          // { text: "初级篇", link: "/learnmore/part1/" },
+          // { text: "进阶篇", link: "/learnmore/part12/" },
+          // { text: "大神篇", link: "http://www.baidu.com" }
         ]
       }
     
     ],
     sidebar: {
       '/ios/' : getiOSSidebar(),
-      '/version/' : getVersionSlidebar()
+      '/version/' : getVersionSlidebar(),
+      '/algorithm/' : getAlgorithmSlidebar()
+
     }
 
   },
@@ -80,9 +86,26 @@ function getVersionSlidebar () {
       collapsable: false,
       children: [
         '',
-        'directive'
+        'directive',
+        'branch'
+
       ]
     }
   ]
 
+}
+
+
+function getAlgorithmSlidebar() {
+  return [
+    {
+      title: '数据结构',
+      collapsable: true,
+      children: [
+        '',
+        'linklist',
+        'tree'
+      ]
+    }
+  ]
 }
