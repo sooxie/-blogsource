@@ -1,5 +1,6 @@
 # 版本控制
 
+书籍 http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/
 
 ##### 查看关联的远程仓库
 ```sh
@@ -85,7 +86,6 @@ $ git merge dev
 git branch -r
 ```
 
-
 ##### 本地分支推送到远程
 ```sh
 git push --set-upstream origin 分支名
@@ -100,4 +100,5 @@ git clone -b 分支名 仓库地址
 ```sh
 git cherry-pick 6cae45a
 ```
+
 

@@ -1,4 +1,3 @@
-
 module.exports = {
   title: 'sooxie',
   description : 'blog',
@@ -9,6 +8,14 @@ module.exports = {
       {
         text: 'iOS',
         link: '/ios/'
+      },
+      {
+        text: 'ffmpeg',
+        link: '/ffmpeg/'
+      },
+      {
+        text: 'OpenGL',
+        link: '/opengl/'
       },
       {
         text: '基础',
@@ -36,7 +43,10 @@ module.exports = {
     sidebar: {
       '/ios/' : getiOSSidebar(),
       '/version/' : getVersionSlidebar(),
-      '/algorithm/' : getAlgorithmSlidebar()
+      '/algorithm/' : getAlgorithmSlidebar(),
+      '/computer/' : getComputerSlidebar(),
+      '/opengl/' : getOpenGLSlidebar(),
+      '/ffmpeg/' : getFFMPEGSlidebar(),
 
     }
 
@@ -44,6 +54,83 @@ module.exports = {
   // extraWatchFiles: [
   //   '.vuepress/nav/zh.js'
   // ]
+}
+
+
+
+function getFFMPEGSlidebar() {
+
+  return [
+  
+    {
+      title: 'ffmpeg',
+      collapsable: true,
+      children: [
+        '',
+      ]
+    },
+    {
+      title: '命令',
+      collapsable: true,
+      children: [
+        'command',
+      ]
+    },
+    {
+      title: 'ffmpeg日志',
+      collapsable: true,
+      children: [
+        'log',
+      ]
+    },
+
+    {
+      title: 'ffmpeg文件',
+      collapsable: true,
+      children: [
+        'file',
+      ]
+    },
+
+
+
+    
+    
+ 
+    
+   ]
+
+}
+
+
+function getOpenGLSlidebar() {
+
+  return [
+  
+    {
+      title: 'OpenGL',
+      collapsable: true,
+      children: [
+        '',
+      ]
+    },
+    {
+      title: '缓冲对象',
+      collapsable: true,
+      children: [
+        'buffer',
+      ]
+    },
+    {
+      title: '着色器',
+      collapsable: true,
+      children: [
+        'shaders',
+      ]
+    },
+    
+   ]
+
 }
 
 function getiOSSidebar() {
@@ -86,8 +173,10 @@ function getVersionSlidebar () {
       collapsable: false,
       children: [
         '',
-        'directive',
-        'branch'
+        // 'directive',
+        'branch',
+        'back',
+        'log'
 
       ]
     }
@@ -107,5 +196,28 @@ function getAlgorithmSlidebar() {
         'tree'
       ]
     }
+  ]
+}
+
+
+function getComputerSlidebar() {
+  return [
+   {
+     title: 'TCP',
+     collapsable: true,
+     children: [
+       'establish',
+       'closed'
+     ]
+   },
+   {
+     title: 'HTTP',
+     collapsable: true,
+     children: [
+       'establish',
+       'closed',
+     ]
+   }
+  
   ]
 }
