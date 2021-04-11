@@ -12,6 +12,15 @@
 
 ## 1、基本信息查询命令
 
+#### 格式转变换
+```
+ffmpeg -i infile.mp4 -vcodec copy -acodec copy outfile.flv
+```
+
+ffmpeg -i out.flv -vcodec copy -acodec copy cai.mp4
+
+ffmpeg -i out.flv -c copy -c:s mov_text output.mp4 -y
+
 ## 2、裁剪和合并命令
 
 #### 裁剪
@@ -39,6 +48,7 @@ ffmpeg -i in.flv -ss 00:00:00 -t 10 out.flv
 
 
 ## 5、分解/复用命令
+
 
 ## 6、直播命令
 

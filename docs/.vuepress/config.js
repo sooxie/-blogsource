@@ -91,6 +91,14 @@ function getFFMPEGSlidebar() {
         'file',
       ]
     },
+    {
+      title: '重要类',
+      collapsable: true,
+      children: [
+        'class',
+      ]
+    },
+
 
 
 
