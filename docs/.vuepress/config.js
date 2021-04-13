@@ -147,26 +147,25 @@ function getiOSSidebar() {
       title: '基础',
       collapsable: true,
       children: [
-        '',
-        'a',
-        'b',
-        'weak'
+        'base/dyld',
+       
       ]
     },
     {
-      title: '进阶',
+      title: 'Objc',
       collapsable: true,
       children: [
-        'c',
-        'd',
+        'objc/strong',
+        'objc/copy',
+        'objc/weak',
       ]
     },
     {
       title: 'coreText',
       collapsable: true,
       children: [
-        'ctfont',
-        'ctframe',
+        'core/ctfont',
+        'core/ctframe',
       ]
     }
    ]
