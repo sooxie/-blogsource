@@ -1,3 +1,4 @@
+
 module.exports = {
   title: 'sooxie',
   description : 'blog',
@@ -29,15 +30,15 @@ module.exports = {
         text: '版本控制',
         link: '/version/'
       },
-      {
-        text: "了解更加多",
-        link: "/learnmore/",
-        items: [
-          // { text: "初级篇", link: "/learnmore/part1/" },
-          // { text: "进阶篇", link: "/learnmore/part12/" },
-          // { text: "大神篇", link: "http://www.baidu.com" }
-        ]
-      }
+      // {
+      //   text: "了解更加多",
+      //   link: "/learnmore/",
+      //   items: [
+      //     { text: "初级篇", link: "/learnmore/part1/" },
+      //     { text: "进阶篇", link: "/learnmore/part12/" },
+      //     { text: "大神篇", link: "http://www.baidu.com" }
+      //   ]
+      // }
     
     ],
     sidebar: {
@@ -51,9 +52,9 @@ module.exports = {
     }
 
   },
-  // extraWatchFiles: [
-  //   '.vuepress/nav/zh.js'
-  // ]
+  extraWatchFiles: [
+    '.vuepress/nav/zh.js'
+  ]
 }
 
 
@@ -67,13 +68,16 @@ function getFFMPEGSlidebar() {
       collapsable: true,
       children: [
         '',
+        'class'
       ]
     },
     {
-      title: '命令',
+      title: 'ffmpeg命令',
       collapsable: true,
       children: [
-        'command',
+        'cmd/ffmpeg_cmd',
+        'cmd/ffplay_cmd',
+        'cmd/ffprobe_cmd'
       ]
     },
     {
@@ -91,11 +95,12 @@ function getFFMPEGSlidebar() {
         'file',
       ]
     },
+  
     {
-      title: '重要类',
+      title: 'YUV播放器',
       collapsable: true,
       children: [
-        'class',
+        'yuv_play',
       ]
     },
 
@@ -141,6 +146,7 @@ function getOpenGLSlidebar() {
 
 }
 
+//iOS
 function getiOSSidebar() {
    return [
     {
@@ -161,13 +167,31 @@ function getiOSSidebar() {
       ]
     },
     {
+      title: 'AVFoundation',
+      collapsable: true,
+      children: [
+        'av/audio_session',
+      ]
+    },
+    {
       title: 'coreText',
       collapsable: true,
       children: [
         'core/ctfont',
         'core/ctframe',
       ]
-    }
+    },
+    {
+      title: '逆向',
+      collapsable: true,
+      children: [
+        'cydia/aslr',
+        'cydia/classdump'
+      ]
+    },
+
+
+    
    ]
 }
 
@@ -206,7 +230,7 @@ function getAlgorithmSlidebar() {
   ]
 }
 
-
+//基础
 function getComputerSlidebar() {
   return [
    {
@@ -224,7 +248,15 @@ function getComputerSlidebar() {
        'establish',
        'closed',
      ]
-   }
-  
+   },
+   {
+    title: '存储管理',
+    collapsable: true,
+    children: [
+      'system/memory',
+      'system/link',
+
+    ]
+  }
   ]
 }
