@@ -81,10 +81,23 @@ function getFFMPEGSlidebar() {
       ]
     },
     {
-      title: 'ffmpeg日志',
+      title: 'ffmpeg重要结构体',
       collapsable: true,
       children: [
-        'log',
+        'struct/avframe',
+        'struct/avpackt',
+        'struct/avfmt_ctx',
+        'struct/avcodec_ctx',
+        'struct/avio_ctx',
+        'struct/avcodec',
+        'struct/avstream',
+      ]
+    },
+    {
+      title: '解码',
+      collapsable: true,
+      children: [
+        'play/time',
       ]
     },
 

@@ -65,6 +65,11 @@ ffmpeg 通过 -i 选项读取输任意数量的输入“文件”（可以是常
 
 
 
+#### 查看设备
+```
+ffmpeg -f avfoundation -list_devices true -i ''
+```
+
 
 #### 格式转变换
 ```
@@ -207,6 +212,18 @@ ffmpeg  -f avfoundation -i :0 -ar 44100 -f s16le out.pcm
 
 ## 4、图片/视频互转命令
 
+
+#### jpg转yuv
+```
+ffmpeg -i a.yuv -pixel_format yuv420p b.yuv
+
+```
+#### jpg转yuv
+```
+ffmpeg  -s 1920x1080 -pix_fmt nv21 -i a.yuv image.jpg
+```
+
+
 #### 视频转JPEG
 ```
 ffmpeg -i test.flv -r 1 -f image2 image-%3d.jpeg
@@ -253,6 +270,12 @@ ffmpeg -i out.h264 -i out.aac -vcodec copy -acodec copy out.mp4
 ## 6、直播命令
 
 
+#### mac nginx启动
+```
+nginx -s reload
+```
+
+
 #### 推流
 ```
 ffmpeg -re -i out.mp4 -c copy -f flv rtmp://server/live/streamName
@@ -270,8 +293,11 @@ ffmpeg -i rtmp://server/live/originalStream -c:a copy -c:v copy -f flv rtmp://se
 
 #### 实时推流
 ```
-ffmpeg -framerate 15 -f avfoundation -i "1" -s 1280x720 -c:v libx264  -f  flv rtmp://localhost:1935/live/room
+ffmpeg -framerate 15 -f avfoundation -i "1" -s 1280x720 -c:v libx264 -f flv rtmp://localhost:1935/live/room
 ```
+ffmpeg -framerate 15 -f avfoundation -i "1" -s 1280x720 -c:v libx264 -f flv rtmp://10.50.128.18:1935/live/room
+
+ffmpeg -re -i a.flv -c copy -f flv rtmp://10.50.128.18:1935/live/room
 
 
 
